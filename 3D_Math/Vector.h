@@ -7,6 +7,8 @@ public:
 	Vector2d(float x, float y);
 	float getX();
 	float getY();
+	float magnitude();
+	void normalize();
 
 private:
 	float x, y;
@@ -22,6 +24,8 @@ public:
 	float getX();
 	float getY();
 	float getZ();
+	float magnitude();
+	void normalize();
 
 private:
 	float x, y, z;
@@ -36,6 +40,8 @@ public:
 	float getY();
 	float getZ();
 	float getW();
+	float magnitude();
+	void normalize();
 
 private:
 	float x, y, z, w;
