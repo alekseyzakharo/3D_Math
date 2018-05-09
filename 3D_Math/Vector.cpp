@@ -27,6 +27,32 @@ void Vector2d::normalize()
 	Vector2d::y /= mag;
 }
 
+bool Vector2d::operator==(const Vector2d& v)
+{
+	return (Vector2d::x == v.x && Vector2d::y == v.y);
+}
+
+bool Vector2d::operator!=(const Vector2d& v)
+{
+	return !(*this == v);
+}
+
+Vector2d & Vector2d::operator+=(const Vector2d& v)
+{
+	Vector2d::x = Vector2d::x + v.x;
+	Vector2d::y = Vector2d::y + v.y;
+	return *this;
+}
+
+Vector2d & Vector2d::operator-=(const Vector2d& v)
+{
+	Vector2d::x = Vector2d::x - v.x;
+	Vector2d::y = Vector2d::y - v.y;
+	return *this;
+}
+
+
+
 
 //Vector3d
 Vector3d::Vector3d() {};
@@ -55,6 +81,32 @@ void Vector3d::normalize()
 	Vector3d::x /= mag;
 	Vector3d::y /= mag;
 	Vector3d::z /= mag;
+}
+
+bool Vector3d::operator==(const Vector3d& v)
+{
+	return (Vector3d::x == v.x && Vector3d::y == v.y && Vector3d::z == v.z);
+}
+
+bool Vector3d::operator!=(const Vector3d& v)
+{
+	return !(*this == v);
+}
+
+Vector3d & Vector3d::operator+=(const Vector3d& v)
+{
+	Vector3d::x = Vector3d::x + v.x;
+	Vector3d::y = Vector3d::y + v.y;
+	Vector3d::z = Vector3d::z + v.z;
+	return *this;
+}
+
+Vector3d & Vector3d::operator-=(const Vector3d& v)
+{
+	Vector3d::x = Vector3d::x - v.x;
+	Vector3d::y = Vector3d::y - v.y;
+	Vector3d::z = Vector3d::z - v.z;
+	return *this;
 }
 
 
@@ -89,4 +141,31 @@ void Vector4d::normalize()
 	Vector4d::x /= mag;
 	Vector4d::y /= mag;
 	Vector4d::z /= mag;
+}
+
+bool Vector4d::operator==(const Vector4d& v)
+{
+	return (Vector4d::x == v.x && Vector4d::y == v.y && Vector4d::z == v.z && Vector4d::w == v.w);
+}
+
+bool Vector4d::operator!=(const Vector4d& v)
+{
+	return !(*this == v);
+}
+
+Vector4d & Vector4d::operator+=(const Vector4d& v)
+{
+	Vector4d::x = Vector4d::x + v.x;
+	Vector4d::y = Vector4d::y + v.y;
+	Vector4d::z = Vector4d::z + v.z;
+	return *this;
+}
+
+Vector4d & Vector4d::operator-=(const Vector4d& v)
+{
+	Vector4d::x = Vector4d::x - v.x;
+	Vector4d::y = Vector4d::y - v.y;
+	Vector4d::z = Vector4d::z - v.z;
+	//Vector4d::w = Vector4d::w - v.w; // ?
+	return *this;
 }

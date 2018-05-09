@@ -10,6 +10,11 @@ public:
 	float magnitude();
 	void normalize();
 
+	bool operator==(const Vector2d& v);
+	bool operator!=(const Vector2d& v);
+	Vector2d & operator+=(const Vector2d& v);
+	Vector2d & operator-=(const Vector2d& v);
+
 private:
 	float x, y;
 
@@ -27,6 +32,11 @@ public:
 	float magnitude();
 	void normalize();
 
+	bool operator==(const Vector3d& v);
+	bool operator!=(const Vector3d& v);
+	Vector3d & operator+=(const Vector3d& v);
+	Vector3d & operator-=(const Vector3d& v);
+
 private:
 	float x, y, z;
 };
@@ -42,6 +52,11 @@ public:
 	float getW();
 	float magnitude();
 	void normalize();
+
+	bool operator==(const Vector4d& v);
+	bool operator!=(const Vector4d& v);
+	Vector4d & operator+=(const Vector4d& v);
+	Vector4d & operator-=(const Vector4d& v);
 
 private:
 	float x, y, z, w;
