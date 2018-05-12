@@ -27,6 +27,23 @@ void Vector2d::normalize()
 	Vector2d::y /= mag;
 }
 
+
+Vector2d & Vector2d::operator=(const Vector2d& v)
+{
+	if (this != &v)
+	{
+		Vector2d::x = v.x;
+		Vector2d::y = v.y;
+	}
+	return *this;
+}
+
+Vector2d Vector2d::operator+(const Vector2d& v)
+{
+	*this += v;
+	return *this;
+}
+
 bool Vector2d::operator==(const Vector2d& v)
 {
 	return (Vector2d::x == v.x && Vector2d::y == v.y);
@@ -81,6 +98,23 @@ void Vector3d::normalize()
 	Vector3d::x /= mag;
 	Vector3d::y /= mag;
 	Vector3d::z /= mag;
+}
+
+Vector3d & Vector3d::operator=(const Vector3d& v)
+{
+	if (this != &v)
+	{
+		Vector3d::x = v.x;
+		Vector3d::y = v.y;
+		Vector3d::z = v.z;
+	}
+	return *this;
+}
+
+Vector3d Vector3d::operator+(const Vector3d& v)
+{
+	*this += v;
+	return *this;
 }
 
 bool Vector3d::operator==(const Vector3d& v)
@@ -141,6 +175,24 @@ void Vector4d::normalize()
 	Vector4d::x /= mag;
 	Vector4d::y /= mag;
 	Vector4d::z /= mag;
+}
+
+Vector4d & Vector4d::operator=(const Vector4d& v)
+{
+	if (this != &v)
+	{
+		Vector4d::x = v.x;
+		Vector4d::y = v.y;
+		Vector4d::z = v.z;
+		Vector4d::w = v.w;
+	}
+	return *this;
+}
+
+Vector4d Vector4d::operator+(const Vector4d& v)
+{
+	*this += v;
+	return *this;
 }
 
 bool Vector4d::operator==(const Vector4d& v)
